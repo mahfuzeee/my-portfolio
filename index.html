@@ -1,1 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahfuz | Full Stack Developer & Electrical Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .hero-animate {
+            animation: float 4s ease-in-out infinite;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-800 text-white font-sans antialiased">
 
+    <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold tracking-wider text-blue-500">MAHFUZ<span class="text-white">.</span></a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#about" class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#skills" class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Skills</a>
+                        <a href="#projects" class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-all">Hire Me</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center">
+            <div class="w-full md:w-1/2 text-center md:text-left mt-10 md:mt-0">
+                <h2 class="text-blue-400 font-semibold tracking-wide uppercase text-sm mb-2">Welcome to my portfolio</h2>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                    Hi, I'm <span class="gradient-text">Mahfuz</span>
+                </h1>
+                <h3 class="text-2xl md:text-3xl text-gray-300 mb-6 font-light">
+                    Full Stack Developer & <br>
+                    <span class="text-white font-medium">Electrical Engineer</span>
+                </h3>
+                <p class="text-gray-400 text-lg mb-8 max-w-lg mx-auto md:mx-0">
+                    Bridging the gap between hardware and software. I build scalable web applications and engineer efficient electrical systems with a focus on technical leadership.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#contact" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition-all shadow-lg shadow-blue-500/30">
+                        Available for Part-Time
+                    </a>
+                    <a href="#projects" class="px-8 py-3 border border-slate-600 hover:border-white rounded-full font-semibold transition-all">
+                        View Work
+                    </a>
+                </div>
+                
+                <div class="mt-8 flex justify-center md:justify-start space-x-6">
+                    <a href="https://www.linkedin.com/in/mahfuzdh/" target="_blank" class="text-gray-400 hover:text-white text-2xl transition-colors"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/mahfuzeee" class="text-gray-400 hover:text-white text-2xl transition-colors"><i class="fab fa-github"></i></a>
+                    <a href="mailto:mahfuz4462@gmail.com" class="text-gray-400 hover:text-white text-2xl transition-colors"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            
+            <div class="w-full md:w-1/2 flex justify-center relative">
+                <!-- <div class="relative w-64 h-64 md:w-96 md:h-96 bg-gradient-to-b from-blue-500 to-transparent rounded-full opacity-20 absolute top-0"></div> -->
+                <div class="hero-animate relative z-10 w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-slate-700 overflow-hidden shadow-2xl">
+                    <img src="./images/Profile_picture.jpg" alt="Mahfuz Profile" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-gray-300 leading-relaxed">
+                    <p>
+                        I am a versatile professional with <em>5 years+</em> experience combining the analytical rigor of <strong>Electrical Engineering</strong> with the creative agility of <strong>Full Stack Web Development</strong>. This unique dual background allows me to understand complex systems from the circuit board to the user interface.
+                    </p>
+                    <p>
+                        Beyond code and circuits, I am a passionate <strong>leader and mentor</strong>. I thrive in environments where I can take ownership of projects, guide teams through technical challenges, and drive product success. 
+                    </p>
+                    <div class="bg-slate-900 p-4 rounded-lg border-l-4 border-blue-500">
+                        <p class="italic text-white">"I am currently open to part-time web development roles where I can leverage my leadership skills to deliver high-impact web solutions."</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-slate-900 p-6 rounded-xl text-center hover:transform hover:-translate-y-1 transition-transform duration-300 border border-slate-700">
+                        <i class="fas fa-code text-4xl text-blue-500 mb-3"></i>
+                        <h4 class="font-bold text-lg">Web Dev</h4>
+                        <p class="text-sm text-gray-400">Full Stack Solutions</p>
+                    </div>
+                    <div class="bg-slate-900 p-6 rounded-xl text-center hover:transform hover:-translate-y-1 transition-transform duration-300 border border-slate-700">
+                        <i class="fas fa-microchip text-4xl text-purple-500 mb-3"></i>
+                        <h4 class="font-bold text-lg">Engineering</h4>
+                        <p class="text-sm text-gray-400">Circuit & IoT</p>
+                    </div>
+                    <div class="bg-slate-900 p-6 rounded-xl text-center hover:transform hover:-translate-y-1 transition-transform duration-300 border border-slate-700">
+                        <i class="fas fa-users text-4xl text-green-500 mb-3"></i>
+                        <h4 class="font-bold text-lg">Leadership</h4>
+                        <p class="text-sm text-gray-400">Team Management</p>
+                    </div>
+                    <div class="bg-slate-900 p-6 rounded-xl text-center hover:transform hover:-translate-y-1 transition-transform duration-300 border border-slate-700">
+                        <i class="fas fa-rocket text-4xl text-red-500 mb-3"></i>
+                        <h4 class="font-bold text-lg">Innovation</h4>
+                        <p class="text-sm text-gray-400">Problem Solving</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Technical Expertise</h2>
+                <p class="text-gray-400">A comprehensive toolkit for modern development and engineering</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-slate-800 rounded-2xl p-8 border border-slate-700 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fas fa-laptop-code text-9xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-layer-group text-blue-500 mr-3"></i> Full Stack Web Dev
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>JavaScript (ES6+) / TypeScript</span>
+                                <span class="text-blue-400">Advanced</span>
+                            </div>
+                            <div class="w-full bg-slate-700 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>React.js & Next.js</span>
+                                <span class="text-blue-400">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-slate-700 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Node.js & Express</span>
+                                <span class="text-blue-400">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-slate-700 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Databases (SQL/NoSQL)</span>
+                                <span class="text-blue-400">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-slate-700 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 rounded-2xl p-8 border border-slate-700 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fas fa-bolt text-9xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-project-diagram text-purple-500 mr-3"></i> Electrical Engineering
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Circuit Analysis & Design</span>
+                                <span class="text-purple-400">Advanced</span>
+                            </div>
+                            <div class="w-full bg-slate-700 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>IoT & Microcontrollers (Arduino/ESP)</span>
+                                <span class="text-purple-400">Advanced</span>
+                            </div>
+                            <div class="w-full bg-slate-700 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>MATLAB & Simulink</span>
+                                <span class="text-purple-400">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-slate-700 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>PLC & Automation</span>
+                                <span class="text-purple-400">Basic</span>
+                            </div>
+                            <div class="w-full bg-slate-700 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 flex flex-wrap justify-center gap-3">
+                <span class="px-4 py-2 bg-slate-700 rounded-full text-sm font-semibold text-gray-300">Git/GitHub</span>
+                <span class="px-4 py-2 bg-slate-700 rounded-full text-sm font-semibold text-gray-300">Docker</span>
+                <span class="px-4 py-2 bg-slate-700 rounded-full text-sm font-semibold text-gray-300">Azure</span>
+                <span class="px-4 py-2 bg-slate-700 rounded-full text-sm font-semibold text-gray-300">Project Management</span>
+                <span class="px-4 py-2 bg-slate-700 rounded-full text-sm font-semibold text-gray-300">Agile/Scrum</span>
+                <span class="px-4 py-2 bg-slate-700 rounded-full text-sm font-semibold text-gray-300">PCB Design</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-slate-800/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+                <p class="text-gray-400">A selection of my work in software and hardware</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-900 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 group">
+                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-500 bg-slate-800">
+                            <i class="fas fa-shopping-cart text-5xl"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-blue-600/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <a href="#" class="px-6 py-2 bg-white text-blue-600 font-bold rounded-full">View Demo</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-blue-400 uppercase tracking-wider">Full Stack Web</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">E-Commerce Platform</h3>
+                        <p class="text-gray-400 text-sm mb-4">A fully functional e-commerce site with user authentication, cart management, and payment gateway integration.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-slate-800 px-2 py-1 rounded border border-slate-700">React</span>
+                            <span class="text-xs bg-slate-800 px-2 py-1 rounded border border-slate-700">Node.js</span>
+                            <span class="text-xs bg-slate-800 px-2 py-1 rounded border border-slate-700">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 group">
+                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-500 bg-slate-800">
+                            <i class="fas fa-wifi text-5xl"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-purple-600/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <a href="#" class="px-6 py-2 bg-white text-purple-600 font-bold rounded-full">View Details</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-purple-400 uppercase tracking-wider">IoT & Hardware</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Smart Home Energy Monitor</h3>
+                        <p class="text-gray-400 text-sm mb-4">IoT-based system to monitor real-time energy consumption with remote control via a mobile dashboard.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-slate-800 px-2 py-1 rounded border border-slate-700">Arduino</span>
+                            <span class="text-xs bg-slate-800 px-2 py-1 rounded border border-slate-700">ESP32</span>
+                            <span class="text-xs bg-slate-800 px-2 py-1 rounded border border-slate-700">IoT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300 group">
+                    <div class="h-48 bg-gray-700 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-500 bg-slate-800">
+                            <i class="fas fa-users-cog text-5xl"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-green-600/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <a href="#" class="px-6 py-2 bg-white text-green-600 font-bold rounded-full">Case Study</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-green-400 uppercase tracking-wider">Leadership</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Team Project Management</h3>
+                        <p class="text-gray-400 text-sm mb-4">Led a team of 5 developers to deliver a client CRM system ahead of schedule, implementing Agile workflows.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-slate-800 px-2 py-1 rounded border border-slate-700">Agile</span>
+                            <span class="text-xs bg-slate-800 px-2 py-1 rounded border border-slate-700">Jira</span>
+                            <span class="text-xs bg-slate-800 px-2 py-1 rounded border border-slate-700">Leadership</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-10">
+        <h2 class="text-center text-3xl font-semibold mb-8">Experience</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-slate-900 p-2 rounded-xl h-28 flex flex-col items-center justify-center">
+        <h3 class="text-xl font-bold">Assistant General Manager (O&M)</h3>
+        <p>Bangladesh Rural Electrification Board | 2020 – Present</p>
+        <p class="text-center">Supervising 33/11 kV substations, relay coordination, maintenance, and system reliability.</p>
+      </div>
+      <div class="bg-slate-900 p-2 rounded-xl h-28 flex flex-col items-center justify-center">
+        <h3 class="text-xl font-bold">Technical Trainer</h3>
+        <p>Project Solutions | 2019 – 2020</p>
+        <p class="text-center">Delivered hands-on training on PLC, automation, and electronics.</p>
+      </div>
+    </div>
+    </section>
+
+    <section id="education">
+
+    </section>
+
+    <section id="cirtification">
+
+    </section>
+
+    <section id="volunteer-activity">
+
+    </section>
+
+    <section id="photo-gallery">
+
+    </section>
+
+    <section id="contact" class="py-20 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[100px] -z-10"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Let's Build Something Together</h2>
+            <p class="text-xl text-gray-300 mb-10">
+                I am currently available for <span class="text-blue-400 font-bold">part-time web development</span> opportunities. 
+                Whether you need a complex web app or leadership for your technical team, I'm ready to help.
+            </p>
+            
+            <div class="bg-slate-800 p-8 rounded-2xl shadow-2xl border border-slate-700 text-left">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Name</label>
+                            <input type="text" class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 text-white" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                            <input type="email" class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 text-white" placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                        <textarea rows="3" class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 text-white" placeholder="How can I help you?"></textarea>
+                    </div>
+                    <button type="button" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-lg transition-all transform hover:scale-[1.02]">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <div class="mt-12 text-gray-500">
+                <p>Or reach me directly at <a href="mailto:mahfuz.eee@duet.ac.bd" class="text-blue-400 hover:underline">mahfuz.eee@duet.ac.bd</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 py-4 border-t border-slate-800 text-center text-#fefefe-800 text-sm">
+        <p>&copy; 2025 Mahfuz. All rights reserved.</p>
+        <div class="mt-3 space-x-4">
+            <a href="https://www.linkedin.com/in/mahfuzdh/" class="hover:text-white transition-colors">LinkedIn</a>
+            <a href="https://github.com/mahfuzeee" class="hover:text-white transition-colors">GitHub</a>
+            <a href="https://x.com/Mahfuz_Muzakkir" class="hover:text-white transition-colors">Twitter</a>
+        </div>
+    </footer>
+
+</body>
+</html>
