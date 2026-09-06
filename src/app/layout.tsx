@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,7 +23,7 @@ export const metadata: Metadata = {
   },
   description:
     "Full-Stack MERN Developer specializing in Node.js backend development, REST APIs, React, MongoDB and modern web applications.",
-  metadataBase: new URL("https://mahfuz-rahman.com"), // Update with actual domain when ready
+  metadataBase: new URL("https://mahfuz-rahman.com"),
   openGraph: {
     title: "Md. Mahfuzur Rahman | Full-Stack MERN Developer",
     description:
@@ -38,7 +40,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body className="bg-background text-text-primary font-sans antialiased">
-        {children}
+        <Navbar />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
       </body>
     </html>
   );
