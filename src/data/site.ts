@@ -7,8 +7,7 @@ export const site = {
   linkedin: "https://linkedin.com/in/mahfuzdh",
   resumeUrl: "/resume/Md-Mahfuzur-Rahman-Resume.pdf", // Place actual PDF in public/resume/
   availability: "Open to Remote & Contract Opportunities",
-  photoUrl:
-    "https://z-cdn-media.chatglm.cn/files/81e2f6f4-8a86-4697-b633-fa40ffbd4497.png?auth_key=1888661734-b55dfb94ccfc4bfe9dd9d56446734ce1-0-d80c5a18972bb0941c171097532bd78d",
+  photoUrl: "/Profile_photo.png",
   photoAlt: "Md. Mahfuzur Rahman - Professional Photo",
 };
 

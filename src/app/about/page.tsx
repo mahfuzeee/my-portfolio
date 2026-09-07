@@ -111,7 +111,7 @@ export default function AboutPage() {
               <li className="flex items-start gap-4">
                 <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
                 <span>
-                  <strong className="text-primary font-semibold">
+                  <strong className="text-text-primary font-semibold">
                     Database Architecture:
                   </strong>{" "}
                   Designing schemas and querying data in both relational

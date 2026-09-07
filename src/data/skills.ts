@@ -1,4 +1,4 @@
-import { SkillCategory } from "@/types/skills";
+import { SkillCategory } from "@/types/index";
 
 export const skills: SkillCategory[] = [
   {
@@ -36,7 +36,7 @@ export const techStrip = [
   "REACT",
   "NEXT.JS",
   "MONGODB",
-  "POSTGRESQL",
+  "MONGOOSE",
 ];
 
 export default skills;

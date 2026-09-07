@@ -39,7 +39,15 @@ export default function FeaturedProjects() {
             <div className="flex min-h-[300px] items-center justify-center bg-background p-8">
               {/* Placeholder for screenshot */}
               <span className="font-mono text-sm text-text-muted">
-                [ADD SCREENSHOT]
+                {featured.screenshots.length > 0 ? (
+                  <img
+                    src={featured.screenshots[0]}
+                    alt={featured.slug}
+                    className="h-full w-full object-cover"
+                  />
+                ) : (
+                  `[ADD SCREENSHOT]`
+                )}
               </span>
             </div>
             <div className="flex flex-col justify-center p-8 lg:p-12">

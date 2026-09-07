@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 // Update this URL with your final deployed domain (e.g., Vercel URL or custom domain)
-const baseUrl = "https://mahfuz-rahman.com";
+const baseUrl = process.env.BASE_URL;
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),

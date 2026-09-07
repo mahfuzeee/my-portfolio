@@ -1,4 +1,4 @@
-import { Project } from "@/types/project";
+import { Project } from "@/types/index";
 
 export const projects: Project[] = [
   {
@@ -53,8 +53,13 @@ export const projects: Project[] = [
     },
     lessonsLearned:
       "Gained deep insights into designing RESTful APIs that are both scalable and easy to consume from the frontend.",
-    screenshots: [],
-    githubUrl: "[ADD GITHUB URL]",
+    screenshots: [
+      {
+        src: "/images/ecommerce-platform.png",
+        alt: "E-commerce Platform",
+      },
+    ],
+    githubUrl: "https://github.com/mahfuzeee/ecommerce-platform",
     liveUrl: "[ADD LIVE DEMO URL]",
   },
   {
@@ -94,9 +99,14 @@ export const projects: Project[] = [
     },
     lessonsLearned:
       "Reinforced the importance of secure route protection and clean separation of concerns in API design.",
-    screenshots: [],
-    githubUrl: "[ADD GITHUB URL]",
-    liveUrl: "[ADD LIVE DEMO URL]",
+    screenshots: [
+      {
+        src: "/images/Job-portal.png",
+        alt: "Job Portal",
+      },
+    ],
+    githubUrl: "https://github.com/mahfuzeee/job-portal-full-stack-MERN",
+    liveUrl: "https://job-portal-mern-five-sigma.vercel.app/",
   },
   {
     slug: "inventory-management",
