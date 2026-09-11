@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Md. Mahfuzur Rahman | Portfolio
+
+A personal portfolio website built with Next.js 16, React, Tailwind CSS, and a custom design system for a full-stack MERN developer profile.
+
+## Overview
+
+This project is a portfolio website for Md. Mahfuzur Rahman, showcasing:
+
+- professional introduction and services
+- technology stack and skills
+- featured project work
+- project case study pages and project listing
+- contact page with EmailJS-powered form integration
+- downloadable resume
+
+## Tech Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- @emailjs/browser
+- ESLint
+
+## Project Structure
+
+```text
+my-portfolio/
+├── public/
+│   ├── images/
+│   ├── resume/
+│   └── Profile_photo.png
+├── src/
+│   ├── app/
+│   ├── components/
+│   ├── data/
+│   ├── lib/
+│   └── types/
+├── package.json
+├── next.config.ts
+└── tailwind.config.ts
+```
+
+## Routes
+
+The app uses the Next.js App Router:
+
+- `/` — home page
+- `/about` — biography and professional details
+- `/projects` — project gallery
+- `/projects/[slug]` — individual project detail pages
+- `/contact` — contact form and direct contact links
+
+## Features
+
+- Responsive dark portfolio UI
+- Project card and project detail data-driven rendering
+- Featured project section and project card components
+- Contact form with input validation and EmailJS integration
+- Metadata and SEO configuration through Next.js metadata exports
+- Resume download link
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build the production site:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Start the production server:
 
-## Learn More
+```bash
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Live Demo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+https://mahfuzrk.vercel.app
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+The site is ready to deploy to platforms such as Vercel or any platform that supports Next.js.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Update the `BASE_URL` environment variable for your deployed domain before building or deploying.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is private and intended for the portfolio owner.

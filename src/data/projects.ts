@@ -199,6 +199,181 @@ export const projects: Project[] = [
     githubUrl: "[ADD GITHUB URL]",
     liveUrl: "[ADD LIVE DEMO URL]",
   },
+  {
+    slug: "course-management-backend-mern",
+    title: "Course Management Backend API",
+    category: "Backend API",
+    featured: false,
+
+    shortDescription:
+      "An Express and MongoDB backend API for user authentication, profile management, and protected course CRUD operations.",
+
+    description:
+      "A backend API for managing users and courses. The project implements registration, login, profile management, JWT authentication through an HTTP cookie, and protected course CRUD operations using Express.js and MongoDB.",
+
+    technologies: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "bcrypt",
+      "REST API",
+      "HTTP Cookies",
+    ],
+
+    features: [
+      "User registration",
+      "User login",
+      "Cookie-based JWT authentication",
+      "Protected user profile",
+      "Profile update",
+      "User logout",
+      "Course creation",
+      "Course listing",
+      "Course details",
+      "Course update",
+      "Course deletion",
+      "Password hashing",
+    ],
+
+    challenge: {
+      problem:
+        "The API needed to protect user and course operations while maintaining a clear authentication flow between the client and backend.",
+
+      solution:
+        "JWT tokens are stored in an HTTP cookie and authentication middleware protects profile and course routes. Mongoose models handle user and course persistence.",
+    },
+
+    keyDecisions: [
+      {
+        title: "Cookie-based authentication",
+        rationale:
+          "Using a cookie for the JWT demonstrates an alternative authentication approach to storing tokens directly in frontend application state.",
+      },
+      {
+        title: "Protected course routes",
+        rationale:
+          "Course operations are protected so that only authenticated users can interact with the management endpoints.",
+      },
+      {
+        title: "Mongoose models",
+        rationale:
+          "Mongoose provides schema-based data modeling and validation for users and courses.",
+      },
+    ],
+
+    architecture: {
+      layers: [
+        "REST API route layer",
+        "Controller/request-handling layer",
+        "Authentication middleware",
+        "Mongoose model layer",
+        "MongoDB database layer",
+      ],
+    },
+
+    lessonsLearned:
+      "This project strengthened my understanding of Express API development, MongoDB data modeling, JWT authentication, HTTP cookies, protected routes, password hashing, and CRUD API design.",
+
+    screenshots: [
+      {
+        src: "/images/projects/course-management/api.png",
+        alt: "Course Management API testing interface",
+      },
+    ],
+
+    githubUrl: "https://github.com/mahfuzeee/course-management-backend-mern",
+
+    liveUrl: "",
+  },
+
+  {
+    slug: "email-verification-mern",
+    title: "MERN Email Verification System",
+    category: "Authentication & Backend",
+    featured: false,
+
+    shortDescription:
+      "A MERN-oriented authentication project demonstrating user registration and email verification through verification links or OTP.",
+
+    description:
+      "An authentication-focused MERN project implementing user registration and email verification. The project uses a Node.js backend, MongoDB, and a frontend component to demonstrate verification through a link or OTP-based workflow.",
+
+    technologies: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "JavaScript",
+      "JWT",
+      "Email Verification",
+      "OTP",
+    ],
+
+    features: [
+      "User registration",
+      "Email verification",
+      "Verification link workflow",
+      "OTP verification workflow",
+      "MongoDB persistence",
+      "Authentication-oriented backend structure",
+    ],
+
+    challenge: {
+      problem:
+        "Newly registered accounts need a mechanism to verify ownership of the supplied email address before allowing the account to be treated as verified.",
+
+      solution:
+        "The project implements an email verification workflow using verification links and/or OTP, with MongoDB used to persist user information and verification-related data.",
+    },
+
+    keyDecisions: [
+      {
+        title: "Dedicated verification workflow",
+        rationale:
+          "Separating email verification from the basic registration flow makes the authentication system easier to understand and extend.",
+      },
+      {
+        title: "MongoDB persistence",
+        rationale:
+          "MongoDB provides flexible persistence for user and verification-related information.",
+      },
+      {
+        title: "CommonJS backend",
+        rationale:
+          "The project uses a straightforward Node.js CommonJS setup suitable for demonstrating backend authentication fundamentals.",
+      },
+    ],
+
+    architecture: {
+      layers: [
+        "Frontend verification interface",
+        "Express API layer",
+        "Authentication/verification logic",
+        "MongoDB/Mongoose data layer",
+        "Email/OTP verification mechanism",
+      ],
+    },
+
+    lessonsLearned:
+      "This project improved my understanding of authentication workflows, email verification, OTP concepts, user registration, MongoDB persistence, and designing multi-step account verification processes.",
+
+    screenshots: [
+      {
+        src: "/images/projects/email-verification/register.png",
+        alt: "Email verification registration interface",
+      },
+      {
+        src: "/images/projects/email-verification/verification.png",
+        alt: "Email verification interface",
+      },
+    ],
+
+    githubUrl: "https://github.com/mahfuzeee/email-verification-mern",
+
+    liveUrl: "",
+  },
 ];
 
 export default projects;
