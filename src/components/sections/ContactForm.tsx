@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, type FormEvent, type ChangeEvent } from "react";
+import { useRef, useState, type FormEvent, type ChangeEvent } from "react";
+import emailjs from "@emailjs/browser";
 import Button from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
@@ -13,6 +14,7 @@ type FormErrors = {
 };
 
 export default function ContactForm() {
+  const formRef = useRef<HTMLFormElement | null>(null);
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errors, setErrors] = useState<FormErrors>({});
 
@@ -53,7 +55,7 @@ export default function ContactForm() {
     }
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!validate()) return;
@@ -61,24 +63,27 @@ export default function ContactForm() {
     setStatus("loading");
 
     try {
-      // ==========================================
-      // BACKEND INTEGRATION POINT
-      // ==========================================
-      // Replace this simulated timeout with your actual API call.
-      // Example with fetch:
-      // const res = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData)
-      // });
-      // if (!res.ok) throw new Error('Failed to send message');
-      // ==========================================
+      if (!formRef.current) {
+        throw new Error("Contact form reference is not available");
+      }
 
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        setStatus("error");
+        return;
+      }
+
+      await emailjs.sendForm(serviceId, templateId, formRef.current, publicKey);
 
       setStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
+      setErrors({});
+      formRef.current.reset();
     } catch (error) {
+      console.error(error);
       setStatus("error");
     }
   };
@@ -117,7 +122,12 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+    <form
+      ref={formRef}
+      onSubmit={handleSubmit}
+      className="space-y-5"
+      noValidate
+    >
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
           <label
