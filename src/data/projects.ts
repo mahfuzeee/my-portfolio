@@ -55,11 +55,11 @@ export const projects: Project[] = [
       "Gained deep insights into designing RESTful APIs that are both scalable and easy to consume from the frontend.",
     screenshots: [
       {
-        src: "/images/ecommerce-platform.png",
+        src: "/images/Ecommerce-screenshoot.png",
         alt: "E-commerce Platform",
       },
     ],
-    githubUrl: "https://github.com/mahfuzeee/ecommerce-platform",
+    githubUrl: "/images/Ecommerce-screenshoot.png",
     liveUrl: "[ADD LIVE DEMO URL]",
   },
   {
@@ -145,7 +145,12 @@ export const projects: Project[] = [
     },
     lessonsLearned:
       "Deepened understanding of relational database design and transactional integrity.",
-    screenshots: [],
+    screenshots: [
+      {
+        src: "/images/Inventory-management.png",
+        alt: "Inventory Management System",
+      },
+    ],
     githubUrl: "[ADD GITHUB URL]",
     liveUrl: "[ADD LIVE DEMO URL]",
   },
@@ -185,7 +190,12 @@ export const projects: Project[] = [
     },
     lessonsLearned:
       "Improved skills in server-side rendering and content security practices.",
-    screenshots: [],
+    screenshots: [
+      {
+        src: "/images/Blog_screenshot.png",
+        alt: "Modern Blog Platform",
+      },
+    ],
     githubUrl: "[ADD GITHUB URL]",
     liveUrl: "[ADD LIVE DEMO URL]",
   },

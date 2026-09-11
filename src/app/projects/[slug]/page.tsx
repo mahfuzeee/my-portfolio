@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Badge from "@/components/ui/Badge";
-import Button from "@/components/ui/Button";
 import Architecture from "@/components/projects/Architecture";
 import ProjectLinks from "@/components/projects/ProjectLinks";
 import { projects } from "@/data/projects";
@@ -17,12 +16,13 @@ export function generateStaticParams() {
 }
 
 // Generate metadata for SEO
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
-}): Metadata {
-  const project = projects.find((p) => p.slug === params.slug);
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     return {
@@ -40,12 +40,13 @@ export function generateMetadata({
   };
 }
 
-export default function ProjectCaseStudy({
+export default async function ProjectCaseStudy({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const project = projects.find((p) => p.slug === params.slug);
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();

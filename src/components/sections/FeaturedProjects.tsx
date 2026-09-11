@@ -1,10 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Badge from "@/components/ui/Badge";
 import { projects } from "@/data/projects";
 import { ArrowRightIcon } from "@/components/ui/Icons";
-import { cn } from "@/lib/utils";
 
 export default function FeaturedProjects() {
   const featured = projects.find((p) => p.featured);
@@ -36,19 +36,21 @@ export default function FeaturedProjects() {
           className="group mb-8 block overflow-hidden rounded-xl border border-border bg-card transition-colors hover:border-accent/40"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="flex min-h-[300px] items-center justify-center bg-background p-8">
+            <div className="relative min-h-[300px] bg-background">
               {/* Placeholder for screenshot */}
-              <span className="font-mono text-sm text-text-muted">
-                {featured.screenshots.length > 0 ? (
-                  <img
-                    src={featured.screenshots[0]}
-                    alt={featured.slug}
-                    className="h-full w-full object-cover"
-                  />
-                ) : (
+              {featured.screenshots.length > 0 ? (
+                <Image
+                  fill
+                  src={featured.screenshots[0].src}
+                  alt={featured.screenshots[0].alt}
+                  className="h-full w-full object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              ) : (
+                <span className="flex h-full items-center justify-center p-8 font-mono text-sm text-text-muted">
                   `[ADD SCREENSHOT]`
-                )}
-              </span>
+                </span>
+              )}
             </div>
             <div className="flex flex-col justify-center p-8 lg:p-12">
               <span className="font-mono text-xs uppercase tracking-wider text-accent">

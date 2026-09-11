@@ -14,15 +14,15 @@ export const skills: SkillCategory[] = [
   },
   {
     title: "Frontend",
-    skills: ["React", "Next.js", "JavaScript", "Tailwind CSS"],
+    skills: ["React", "Next.js", "JavaScript", "Tailwind CSS", "TypeScript"],
   },
   {
     title: "Databases",
-    skills: ["MongoDB", "Mongoose", "PostgreSQL"],
+    skills: ["MongoDB", "Mongoose", "MySQL"],
   },
   {
     title: "Data & State",
-    skills: ["TanStack Query", "Zustand", "Axios"],
+    skills: ["TanStack Query", "Zustand", "Axios", "Redux"],
   },
   {
     title: "Tools",
