@@ -50,7 +50,7 @@ export default function Footer() {
 
         <div className="mt-8 border-t border-border pt-8 text-center">
           <p className="text-xs text-text-muted">
-            © 2026 {site.name}. All rights reserved.
+            © {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>
         </div>
       </Container>

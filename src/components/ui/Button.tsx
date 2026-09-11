@@ -10,6 +10,7 @@ interface BaseProps {
   size?: Size;
   className?: string;
   children: ReactNode;
+  disabled?: boolean;
 }
 
 const variantStyles: Record<Variant, string> = {
@@ -46,6 +47,7 @@ export default function Button({
   target,
   rel,
   download,
+  disabled = false,
 }: ButtonProps) {
   const classes = cn(
     "inline-flex items-center justify-center font-medium rounded-lg transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background",
@@ -78,7 +80,12 @@ export default function Button({
   }
 
   return (
-    <button type={type} className={classes} onClick={onClick}>
+    <button
+      type={type}
+      className={classes}
+      onClick={onClick}
+      disabled={disabled}
+    >
       {children}
     </button>
   );

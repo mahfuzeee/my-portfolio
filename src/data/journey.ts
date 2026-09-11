@@ -1,4 +1,4 @@
-import { JourneyStep } from "@/types/journey";
+import type { JourneyStep } from "@/types";
 
 export const journey: JourneyStep[] = [
   {

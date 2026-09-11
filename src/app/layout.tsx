@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 // Update this URL with your final deployed domain (e.g., Vercel URL or custom domain)
-const baseUrl = process.env.BASE_URL;
+const baseUrl = process.env.BASE_URL ?? "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
