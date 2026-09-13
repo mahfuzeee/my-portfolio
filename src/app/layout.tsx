@@ -74,7 +74,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <body className="bg-background text-text-primary font-sans antialiased">
+      <body
+        suppressHydrationWarning
+        className="bg-background text-text-primary font-sans antialiased"
+      >
         {/* Skip to content link for accessibility */}
         <a
           href="#main-content"

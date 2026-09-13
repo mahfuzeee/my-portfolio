@@ -147,7 +147,7 @@ export const projects: Project[] = [
       "Deepened understanding of relational database design and transactional integrity.",
     screenshots: [
       {
-        src: "/images/Inventory-management.png",
+        src: "/images/inventory-management.jpeg",
         alt: "Inventory Management System",
       },
     ],
@@ -278,7 +278,7 @@ export const projects: Project[] = [
 
     screenshots: [
       {
-        src: "/images/projects/course-management/api.png",
+        src: "/images/course-management.jpeg",
         alt: "Course Management API testing interface",
       },
     ],
@@ -361,7 +361,7 @@ export const projects: Project[] = [
 
     screenshots: [
       {
-        src: "/images/projects/email-verification/register.png",
+        src: "/images/email-verification.jpeg",
         alt: "Email verification registration interface",
       },
       {
