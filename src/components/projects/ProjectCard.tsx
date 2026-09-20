@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Badge from "@/components/ui/Badge";
 import { ArrowRightIcon } from "@/components/ui/Icons";
 import { Project } from "@/types";
@@ -12,10 +13,13 @@ export default function ProjectCard({ project }: { project: Project }) {
       {/* Screenshot Placeholder Area */}
       <div className="relative aspect-video w-full bg-secondary flex items-center justify-center border-b border-border">
         {project.screenshots.length > 0 ? (
-          <img
+          <Image
             src={project.screenshots[0].src}
             alt={project.screenshots[0].alt}
+            fill
             className="h-full w-full object-cover"
+            loading="lazy"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
           />
         ) : (
           <span className="font-mono text-xs text-text-muted">
