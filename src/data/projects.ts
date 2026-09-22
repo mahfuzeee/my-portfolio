@@ -59,9 +59,10 @@ export const projects: Project[] = [
         alt: "E-commerce Platform",
       },
     ],
-    githubUrl: "/images/Ecommerce-screenshoot.png",
+    githubUrl: "https://github.com/mahfuzeee/ecommerce-backend-mern",
     liveUrl: "[ADD LIVE DEMO URL]",
   },
+
   {
     slug: "job-portal",
     title: "Job Portal",
@@ -108,6 +109,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/mahfuzeee/job-portal-full-stack-MERN",
     liveUrl: "https://job-portal-mern-five-sigma.vercel.app/",
   },
+
   {
     slug: "inventory-management",
     title: "Inventory Management System",
@@ -154,6 +156,7 @@ export const projects: Project[] = [
     githubUrl: "[ADD GITHUB URL]",
     liveUrl: "[ADD LIVE DEMO URL]",
   },
+
   {
     slug: "modern-blog-platform",
     title: "Modern Blog Platform",
@@ -196,9 +199,10 @@ export const projects: Project[] = [
         alt: "Modern Blog Platform",
       },
     ],
-    githubUrl: "[ADD GITHUB URL]",
+    githubUrl: "https://github.com/mahfuzeee/blog-services-api",
     liveUrl: "[ADD LIVE DEMO URL]",
   },
+
   {
     slug: "course-management-backend-mern",
     title: "Course Management Backend API",
@@ -372,7 +376,7 @@ export const projects: Project[] = [
 
     githubUrl: "https://github.com/mahfuzeee/email-verification-mern",
 
-    liveUrl: "",
+    liveUrl: "https://email-verification-mern.vercel.app/",
   },
 ];
 
