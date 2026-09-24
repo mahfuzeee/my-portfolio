@@ -111,6 +111,139 @@ export const projects: Project[] = [
   },
 
   {
+    slug: "modern-blog-platform",
+    title: "Modern Blog Platform",
+    category: "Content Management",
+    featured: false,
+    shortDescription:
+      "A full-stack blogging platform featuring content management, authentication and user interactions.",
+    description:
+      "A dynamic content platform built for writers and readers. It supports rich text management, user engagement, and responsive design to ensure content looks great on any device.",
+    technologies: ["React", "Next.js", "Node.js", "MongoDB"],
+    features: [
+      "Authentication",
+      "CRUD",
+      "Blog management",
+      "Comments",
+      "User profiles",
+      "Responsive UI",
+    ],
+    challenge: {
+      problem:
+        "Handling rich text formatting safely without exposing the app to XSS attacks.",
+      solution:
+        "Sanitized all HTML input on the server before storing it in the database, and rendered content using safe rendering methods on the frontend.",
+    },
+    keyDecisions: [
+      {
+        title: "SEO Optimization",
+        rationale:
+          "Used Next.js server-side rendering for blog post pages to ensure optimal search engine indexing.",
+      },
+    ],
+    architecture: {
+      layers: ["Next.js", "REST API", "Node.js + Express", "MongoDB"],
+    },
+    lessonsLearned:
+      "Improved skills in server-side rendering and content security practices.",
+    screenshots: [
+      {
+        src: "/images/Blog_screenshot.png",
+        alt: "Modern Blog Platform",
+      },
+    ],
+    githubUrl: "https://github.com/mahfuzeee/blog-services-api",
+    liveUrl: "https://inkwell-blog-react.vercel.app/",
+  },
+
+  {
+    slug: "email-verification-mern",
+    title: "MERN Email Verification System",
+    category: "Authentication & Backend",
+    featured: false,
+
+    shortDescription:
+      "A MERN-oriented authentication project demonstrating user registration and email verification through verification links or OTP.",
+
+    description:
+      "An authentication-focused MERN project implementing user registration and email verification. The project uses a Node.js backend, MongoDB, and a frontend component to demonstrate verification through a link or OTP-based workflow.",
+
+    technologies: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "JavaScript",
+      "JWT",
+      "Email Verification",
+      "OTP",
+    ],
+
+    features: [
+      "User registration",
+      "Email verification",
+      "Verification link workflow",
+      "OTP verification workflow",
+      "MongoDB persistence",
+      "Authentication-oriented backend structure",
+    ],
+
+    challenge: {
+      problem:
+        "Newly registered accounts need a mechanism to verify ownership of the supplied email address before allowing the account to be treated as verified.",
+
+      solution:
+        "The project implements an email verification workflow using verification links and/or OTP, with MongoDB used to persist user information and verification-related data.",
+    },
+
+    keyDecisions: [
+      {
+        title: "Dedicated verification workflow",
+        rationale:
+          "Separating email verification from the basic registration flow makes the authentication system easier to understand and extend.",
+      },
+      {
+        title: "MongoDB persistence",
+        rationale:
+          "MongoDB provides flexible persistence for user and verification-related information.",
+      },
+      {
+        title: "CommonJS backend",
+        rationale:
+          "The project uses a straightforward Node.js CommonJS setup suitable for demonstrating backend authentication fundamentals.",
+      },
+    ],
+
+    architecture: {
+      layers: [
+        "Frontend verification interface",
+        "Express API layer",
+        "Authentication/verification logic",
+        "MongoDB/Mongoose data layer",
+        "Email/OTP verification mechanism",
+      ],
+    },
+
+    lessonsLearned:
+      "This project improved my understanding of authentication workflows, email verification, OTP concepts, user registration, MongoDB persistence, and designing multi-step account verification processes.",
+
+    screenshots: [
+      {
+        src: "/images/email-verification.jpeg",
+        alt: "Email verification registration interface",
+      },
+      {
+        src: "/images/projects/email-verification/verification.png",
+        alt: "Email verification interface",
+      },
+    ],
+
+    githubUrl: "https://github.com/mahfuzeee/email-verification-mern",
+
+    liveUrl: "https://email-verification-mern.vercel.app/",
+  },
+
+  {
     slug: "inventory-management",
     title: "Inventory Management System",
     category: "Business Application",
@@ -154,52 +287,6 @@ export const projects: Project[] = [
       },
     ],
     githubUrl: "[ADD GITHUB URL]",
-    liveUrl: "[ADD LIVE DEMO URL]",
-  },
-
-  {
-    slug: "modern-blog-platform",
-    title: "Modern Blog Platform",
-    category: "Content Management",
-    featured: false,
-    shortDescription:
-      "A full-stack blogging platform featuring content management, authentication and user interactions.",
-    description:
-      "A dynamic content platform built for writers and readers. It supports rich text management, user engagement, and responsive design to ensure content looks great on any device.",
-    technologies: ["React", "Next.js", "Node.js", "MongoDB"],
-    features: [
-      "Authentication",
-      "CRUD",
-      "Blog management",
-      "Comments",
-      "User profiles",
-      "Responsive UI",
-    ],
-    challenge: {
-      problem:
-        "Handling rich text formatting safely without exposing the app to XSS attacks.",
-      solution:
-        "Sanitized all HTML input on the server before storing it in the database, and rendered content using safe rendering methods on the frontend.",
-    },
-    keyDecisions: [
-      {
-        title: "SEO Optimization",
-        rationale:
-          "Used Next.js server-side rendering for blog post pages to ensure optimal search engine indexing.",
-      },
-    ],
-    architecture: {
-      layers: ["Next.js", "REST API", "Node.js + Express", "MongoDB"],
-    },
-    lessonsLearned:
-      "Improved skills in server-side rendering and content security practices.",
-    screenshots: [
-      {
-        src: "/images/Blog_screenshot.png",
-        alt: "Modern Blog Platform",
-      },
-    ],
-    githubUrl: "https://github.com/mahfuzeee/blog-services-api",
     liveUrl: "[ADD LIVE DEMO URL]",
   },
 
@@ -290,93 +377,6 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/mahfuzeee/course-management-backend-mern",
 
     liveUrl: "",
-  },
-
-  {
-    slug: "email-verification-mern",
-    title: "MERN Email Verification System",
-    category: "Authentication & Backend",
-    featured: false,
-
-    shortDescription:
-      "A MERN-oriented authentication project demonstrating user registration and email verification through verification links or OTP.",
-
-    description:
-      "An authentication-focused MERN project implementing user registration and email verification. The project uses a Node.js backend, MongoDB, and a frontend component to demonstrate verification through a link or OTP-based workflow.",
-
-    technologies: [
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Mongoose",
-      "JavaScript",
-      "JWT",
-      "Email Verification",
-      "OTP",
-    ],
-
-    features: [
-      "User registration",
-      "Email verification",
-      "Verification link workflow",
-      "OTP verification workflow",
-      "MongoDB persistence",
-      "Authentication-oriented backend structure",
-    ],
-
-    challenge: {
-      problem:
-        "Newly registered accounts need a mechanism to verify ownership of the supplied email address before allowing the account to be treated as verified.",
-
-      solution:
-        "The project implements an email verification workflow using verification links and/or OTP, with MongoDB used to persist user information and verification-related data.",
-    },
-
-    keyDecisions: [
-      {
-        title: "Dedicated verification workflow",
-        rationale:
-          "Separating email verification from the basic registration flow makes the authentication system easier to understand and extend.",
-      },
-      {
-        title: "MongoDB persistence",
-        rationale:
-          "MongoDB provides flexible persistence for user and verification-related information.",
-      },
-      {
-        title: "CommonJS backend",
-        rationale:
-          "The project uses a straightforward Node.js CommonJS setup suitable for demonstrating backend authentication fundamentals.",
-      },
-    ],
-
-    architecture: {
-      layers: [
-        "Frontend verification interface",
-        "Express API layer",
-        "Authentication/verification logic",
-        "MongoDB/Mongoose data layer",
-        "Email/OTP verification mechanism",
-      ],
-    },
-
-    lessonsLearned:
-      "This project improved my understanding of authentication workflows, email verification, OTP concepts, user registration, MongoDB persistence, and designing multi-step account verification processes.",
-
-    screenshots: [
-      {
-        src: "/images/email-verification.jpeg",
-        alt: "Email verification registration interface",
-      },
-      {
-        src: "/images/projects/email-verification/verification.png",
-        alt: "Email verification interface",
-      },
-    ],
-
-    githubUrl: "https://github.com/mahfuzeee/email-verification-mern",
-
-    liveUrl: "https://email-verification-mern.vercel.app/",
   },
 ];
 
