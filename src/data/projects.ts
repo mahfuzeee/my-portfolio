@@ -60,7 +60,7 @@ export const projects: Project[] = [
       },
     ],
     githubUrl: "https://github.com/mahfuzeee/ecommerce-backend-mern",
-    liveUrl: "[ADD LIVE DEMO URL]",
+    liveUrl: "https://ecommerce-frontend-mr.vercel.app/",
   },
 
   {
