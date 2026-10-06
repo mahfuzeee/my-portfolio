@@ -3,7 +3,12 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ContactForm from "@/components/sections/ContactForm";
 import { site } from "@/data/site";
-import { GitHubIcon, LinkedInIcon, MailIcon } from "@/components/ui/Icons";
+import {
+  GitHubIcon,
+  LinkedInIcon,
+  MailIcon,
+  PhoneIcon,
+} from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -50,11 +55,11 @@ export default function ContactPage() {
               </a>
 
               <a
-                href={`callto:${site.phone}`}
+                href={`tel:${site.phone}`}
                 className="flex items-center gap-4 rounded-xl border border-border bg-card p-4 transition-colors hover:border-accent/40"
               >
                 <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary text-accent">
-                  <MailIcon className="h-5 w-5" />
+                  <PhoneIcon className="h-5 w-5" />
                 </span>
                 <div>
                   <p className="text-xs font-mono text-text-muted uppercase">

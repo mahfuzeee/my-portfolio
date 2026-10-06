@@ -27,6 +27,20 @@ export const MailIcon = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+export const PhoneIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.49 12.49 0 0 0 .67 7.72A2 2 0 0 0 7.61 10l1.64 1.64a16.04 16.04 0 0 0 6.75 6.75L17.8 20.4a2 2 0 0 0 2.28.94 12.49 12.49 0 0 0 3.99-1.34A2 2 0 0 1 22 16.92z" />
+  </svg>
+);
+
 export const MenuIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     viewBox="0 0 24 24"
