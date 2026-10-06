@@ -50,6 +50,23 @@ export default function ContactPage() {
               </a>
 
               <a
+                href={`callto:${site.phone}`}
+                className="flex items-center gap-4 rounded-xl border border-border bg-card p-4 transition-colors hover:border-accent/40"
+              >
+                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary text-accent">
+                  <MailIcon className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="text-xs font-mono text-text-muted uppercase">
+                    Phone
+                  </p>
+                  <p className="text-sm text-text-primary font-medium">
+                    {site.phone}
+                  </p>
+                </div>
+              </a>
+
+              <a
                 href={site.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
