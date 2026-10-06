@@ -14,11 +14,18 @@ export const skills: SkillCategory[] = [
   },
   {
     title: "Frontend",
-    skills: ["React", "Next.js", "JavaScript", "Tailwind CSS", "TypeScript"],
+    skills: [
+      "React",
+      "Next.js",
+      "JavaScript",
+      "Tailwind CSS",
+      "TypeScript",
+      "Shadcn UI",
+    ],
   },
   {
     title: "Databases",
-    skills: ["MongoDB", "Mongoose", "MySQL"],
+    skills: ["MongoDB", "Mongoose", "PostgreSQL"],
   },
   {
     title: "Data & State",
@@ -37,6 +44,8 @@ export const techStrip = [
   "NEXT.JS",
   "MONGODB",
   "MONGOOSE",
+  "POSTGRESQL",
+  "HTML",
 ];
 
 export default skills;

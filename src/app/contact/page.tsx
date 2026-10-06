@@ -59,7 +59,7 @@ export default function ContactPage() {
                 className="flex items-center gap-4 rounded-xl border border-border bg-card p-4 transition-colors hover:border-accent/40"
               >
                 <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary text-accent">
-                  <PhoneIcon className="h-5 w-5 text-gray-600" />
+                  <PhoneIcon className="h-5 w-5" />
                 </span>
                 <div>
                   <p className="text-xs font-mono text-text-muted uppercase">
